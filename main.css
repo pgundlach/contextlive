@@ -1,0 +1,35 @@
+/* main css for texshow-web */
+
+body { background-color:#FFFFF0; }
+h1 i { font-family:sans-serif; font-style:italic } 
+
+/* i    { font-family:monospace; font-style:oblique } */
+
+p { font-family: sans-serif; }
+p.footnote { margin-top:3cm; }
+
+h1,h2,h3,h4,h5,ul { font-family: sans-serif; } 
+h2 { margin-top:1cm; }
+ol,li,div,td,th,b,i,textarea,input { font-family:monospace; }
+a        { text-decoration: none } 
+.first   { background-color:#00FFFF; }
+.second  { background-color:#CCFF66; }
+.third   { background-color:#FF6FCF; }
+.cmd     { font-family:monospace; }
+.annot   { font-family:sans-serif; margin-top:1cm; }
+.large   { font-size: 24pt; }
+.example { width:99% ; 
+           border-width:1px;
+           border-style:dashed;
+           border-color:blue;
+           padding:2px;
+	   background-color:#F0F0F0; }
+h1.interface {font-size:120% ; margin-bottom:16pt }
+h2.msg {font-size:100%; 
+              margin-bottom:10pt;
+              margin-top:0pt }
+pre.result { margin-left:10pt; margin-top:2pt; font-size:90% ; }
+pre.output { font-size:80% ; }
+
+a:hover   { color: rgb(0, 96, 255) } 
+a:active  { color: red; }
