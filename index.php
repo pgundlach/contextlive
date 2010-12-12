@@ -82,12 +82,7 @@ document.getElementById("openoutput").removeAttribute("target");
     <body onLoad="javascript:activate()">
     <?php  } ?>
     <h1>context live @ contextgarden.net</h1>
-<?php if ($posted) { ?>
-    <a id="openoutput" href="/output.cgi?id=<?php echo $suffix ?>" target="texwebout">View transcript</a>
-       or <a target="result" 
-     href="/result.cgi?id=<?php echo $suffix?>">download the pdf-file</a>
-        (wait for <code>texexec</code> to finish). 
-<?php } else { ?>
+<?php if ($notposted) { ?>
     <!--<p><strong>Warning: </strong>The Live Garden is currently under maintenance. Expect the unexpectable and watch out for the droseras! <em>The Assistant Gardener</em></p>-->
     <p>Try out ConTeXt without installing it! Enter the source code
     in the form below and click on typeset. Once the output is 
@@ -96,7 +91,7 @@ document.getElementById("openoutput").removeAttribute("target");
 <!-- <p><b>TeX on contextgarden is currently disabled. We try to bring it up as soon as possible. </b></p> -->
    <p>Versions used: ConTeXt: <?php 
      echo readlink("/opt/context/current"); 
-      echo ", TeXlive: 2007"; 
+      echo " (MK II), TeXlive: 2007";
 ?>   </p>
    <p>Please report problems to <em>gardeners <em>'at' </em> contextgarden.net</em></p>
    <form action="<?php $_SERVER["PHP_SELF"] ?>" method="post" target="_self">
@@ -123,6 +118,13 @@ Hello world!
     <input type="submit" value="typeset">
     <input type="reset"  value="reset form"></td></tr></table>
   </form>
+<?php if ($posted) { ?>
+    <a id="openoutput" href="/output.cgi?id=<?php echo $suffix ?>" target="texwebout">View transcript</a>
+       or <a target="result"
+     href="/result.cgi?id=<?php echo $suffix?>">download the pdf-file</a>
+        (wait for <code>texexec</code> to finish).
+<?php } ?>
+
     <?php
 if ($debug) {
   ?><pre><?php
