@@ -91,7 +91,7 @@ document.getElementById("openoutput").removeAttribute("target");
 <!-- <p><b>TeX on contextgarden is currently disabled. We try to bring it up as soon as possible. </b></p> -->
    <p>Versions used: ConTeXt: <?php 
      echo readlink("/opt/context/current"); 
-      echo " (MK II), TeXlive: 2007";
+      echo " (MK II), TeXlive: 2008";
 ?>   </p>
    <p>Please report problems to <em>gardeners <em>'at' </em> contextgarden.net</em></p>
    <form action="<?php $_SERVER["PHP_SELF"] ?>" method="post" target="_self">

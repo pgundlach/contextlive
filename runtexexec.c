@@ -55,7 +55,7 @@ int main(int argc, char *argv[]) {
 #ifdef SCHNEE
   ret = 0;
 #else
-  ret  = putenv("PATH=/opt/context/current/bin:/opt/texlive2007/bin/i386-linux:/opt/local/bin:/usr/bin:/bin");
+  ret  = putenv("PATH=/opt/context/current/bin:/opt/texlive2008/bin/x86_64-linux:/opt/local/bin:/usr/bin:/bin");
   /* 
      I (Mojca) replaced TEXMFCONTEXT because I had problems setting up the proper variable in the proper 
      texmf.cnf file. I also reshuffled things in PATH, since otherwise texexec from bin took precedence
